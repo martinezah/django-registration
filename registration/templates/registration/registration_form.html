@@ -4,11 +4,22 @@
 {% block title %}{% trans "Register for an account" %}{% endblock %}
 
 {% block content %}
+<h1>Fight Human Trafficking</h1>
+<div class="container">
+<div class="col-lg-4 col-lg-offset-4">
+<h2>Register for an Account</h2>
+<br>
+<p><span class="label label-danger">Warning:</span> Content presented on this site may contain graphic and/or sexually explicit text or images.</p>
+<br>
 <form method="post" action="">
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="{% trans 'Submit' %}" />
+    <table class="table">
+    {{ form.as_table }}
+    </table>
+    <input type="submit" class="btn btn-success" value="{% trans 'Submit' %}" />
 </form>
+</div>
+</div>
 {% endblock %}
 
 
